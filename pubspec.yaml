@@ -28,6 +28,9 @@ flutter:
           weight: 300
         - asset: fonts/OpenSans-Bold.ttf
           weight: 700
+  assets:
+    - images/fingerprint.png
+    - images/bg.jpg
 
   #
   # For details regarding fonts in packages, see
