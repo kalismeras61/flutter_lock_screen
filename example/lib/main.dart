@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lock_screen/flutter_lock_screen.dart';
+import '../../lib/flutter_lock_screen.dart';
 
 class PassCodeScreen extends StatefulWidget {
   PassCodeScreen({Key key, this.title}) : super(key: key);

@@ -18,6 +18,7 @@ class LockScreen extends StatefulWidget {
   final String wrongPassContent;
   final String wrongPassCancelButtonText;
   final String bgImage;
+  final String fingerPrintImage;
   final Color borderColor;
   final Color foregroundColor;
   final PassCodeVerify passCodeVerify;
@@ -32,6 +33,7 @@ class LockScreen extends StatefulWidget {
     this.fingerFunction,
     this.showFingerPass = false,
     this.bgImage,
+    this.fingerPrintImage,
     this.showWrongPassDialog = false,
     this.wrongPassTitle,
     this.wrongPassContent,
@@ -39,6 +41,7 @@ class LockScreen extends StatefulWidget {
   })  : assert(title != null),
         assert(passLength <= 8),
         assert(bgImage != null),
+        assert(fingerPrintImage != null),
         assert(borderColor != null),
         assert(foregroundColor != null),
         assert(passCodeVerify != null),
@@ -273,7 +276,7 @@ class _LockScreenState extends State<LockScreen> {
                                         });
                                   },
                                   child: Image.asset(
-                                    "images/fingerprint.png",
+                                    widget.fingerPrintImage,
                                     height: 50,
                                     width: 50,
                                     color: Colors.white,
