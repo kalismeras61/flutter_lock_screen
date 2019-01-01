@@ -25,7 +25,7 @@ class _PassCodeScreenState extends State<PassCodeScreen> {
         wrongPassContent: "Wrong pass please try again.",
         wrongPassTitle: "Opps!",
         wrongPassCancelButtonText: "Cancel",
-        codeVerify: (List<int> passcode) async {
+        passCodeVerify: (List<int> passcode) async {
           for (int i = 0; i < myPass.length; i++) {
             if (passcode[i] != myPass[i]) {
               return false;

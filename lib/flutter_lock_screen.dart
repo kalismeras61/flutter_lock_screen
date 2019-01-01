@@ -5,7 +5,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 typedef void DeleteCode();
-typedef Future<bool> CodeVerify(List<int> passcode);
+typedef Future<bool> PassCodeVerify(List<int> passcode);
 
 class LockScreen extends StatefulWidget {
   final VoidCallback onSuccess;
@@ -20,7 +20,7 @@ class LockScreen extends StatefulWidget {
   final String bgImage;
   final Color borderColor;
   final Color foregroundColor;
-  final CodeVerify codeVerify;
+  final PassCodeVerify passCodeVerify;
 
   LockScreen({
     this.onSuccess,
@@ -28,7 +28,7 @@ class LockScreen extends StatefulWidget {
     this.borderColor,
     this.foregroundColor = Colors.transparent,
     this.passLength,
-    this.codeVerify,
+    this.passCodeVerify,
     this.fingerFunction,
     this.showFingerPass = false,
     this.bgImage,
@@ -41,7 +41,7 @@ class LockScreen extends StatefulWidget {
         assert(bgImage != null),
         assert(borderColor != null),
         assert(foregroundColor != null),
-        assert(codeVerify != null),
+        assert(passCodeVerify != null),
         assert(onSuccess != null);
 
   @override
@@ -62,7 +62,7 @@ class _LockScreenState extends State<LockScreen> {
       });
 
       if (_currentCodeLength == widget.passLength) {
-        widget.codeVerify(_inputCodes).then((onValue) {
+        widget.passCodeVerify(_inputCodes).then((onValue) {
           if (onValue) {
             setState(() {
               _currentState = 1;
