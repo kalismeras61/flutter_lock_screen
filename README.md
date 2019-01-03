@@ -12,10 +12,6 @@ This package gives you beautiful pass code page for using both android and ios.
 <img src="http://www.yasinilhan.com/passcode/howtouse.gif" width="320" height="600" title="Screen Shoot">
 <img src="http://www.yasinilhan.com/passcode/1.png" width="300" height="600" title="Screen Shoot">
 
-## Usage
-It is really easy to use!
-You should ensure that you add the `flutter_lock_screen` as a dependency in your flutter project.
-
 ## Finger Print Usage
 iOS Integration
 Note that this plugin works with both TouchID and FaceID. However, to use the latter, you need to also add:
@@ -33,6 +29,10 @@ Update your project's AndroidManifest.xml file to include the USE_FINGERPRINT pe
   <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
 <manifest>
 ```
+
+## Usage
+It is really easy to use!
+You should ensure that you add the `flutter_lock_screen` as a dependency in your flutter project.
 
 ```yaml
 dependencies:

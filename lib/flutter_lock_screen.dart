@@ -19,6 +19,7 @@ class LockScreen extends StatefulWidget {
   final String wrongPassContent;
   final String wrongPassCancelButtonText;
   final String bgImage;
+  final Color numColor;
   final String fingerPrintImage;
   final Color borderColor;
   final Color foregroundColor;
@@ -35,6 +36,7 @@ class LockScreen extends StatefulWidget {
     this.fingerVerify = false,
     this.showFingerPass = false,
     this.bgImage,
+    this.numColor = Colors.black,
     this.fingerPrintImage,
     this.showWrongPassDialog = false,
     this.wrongPassTitle,
@@ -128,6 +130,16 @@ class _LockScreenState extends State<LockScreen> {
         _currentState = 0;
         _currentCodeLength--;
         _inputCodes.removeAt(_currentCodeLength);
+      }
+    });
+  }
+
+  _deleteAllCode() {
+    setState(() {
+      if (_currentCodeLength > 0) {
+        _currentState = 0;
+        _currentCodeLength = 0;
+        _inputCodes.clear();
       }
     });
   }
@@ -257,9 +269,9 @@ class _LockScreenState extends State<LockScreen> {
                           buildContainerCircle(7),
                           buildContainerCircle(8),
                           buildContainerCircle(9),
-                          Text(""),
+                          buildRemoveIcon(Icons.close),
                           buildContainerCircle(0),
-                          buildContainerIcon(),
+                          buildContainerIcon(Icons.arrow_back),
                         ],
                       ),
                     ),
@@ -296,16 +308,47 @@ class _LockScreenState extends State<LockScreen> {
           child: Text(
             number.toString(),
             style: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.normal,
-            ),
+                fontSize: 28,
+                fontWeight: FontWeight.normal,
+                color: widget.numColor),
           ),
         ),
       ),
     );
   }
 
-  Widget buildContainerIcon() {
+  Widget buildRemoveIcon(IconData icon) {
+    return InkResponse(
+      onTap: () {
+        if (0 < _currentCodeLength) {
+          _deleteAllCode();
+        }
+      },
+      child: Container(
+        height: 50,
+        width: 50,
+        decoration: BoxDecoration(
+            color: Colors.white,
+            shape: BoxShape.circle,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black12,
+                blurRadius: 10,
+                spreadRadius: 0,
+              )
+            ]),
+        child: Center(
+          child: Icon(
+            icon,
+            size: 30,
+            color: widget.numColor,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buildContainerIcon(IconData icon) {
     return InkResponse(
       onTap: () {
         if (0 < _currentCodeLength) {
@@ -335,9 +378,9 @@ class _LockScreenState extends State<LockScreen> {
             ]),
         child: Center(
           child: Icon(
-            Icons.arrow_back,
+            icon,
             size: 30,
-            color: Colors.black,
+            color: widget.numColor,
           ),
         ),
       ),
