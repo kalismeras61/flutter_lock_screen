@@ -19,18 +19,20 @@ You should ensure that you add the `flutter_lock_screen` as a dependency in your
 ## Finger Print Usage
 iOS Integration
 Note that this plugin works with both TouchID and FaceID. However, to use the latter, you need to also add:
-
+```
 <key>NSFaceIDUsageDescription</key>
 <string>Why is my app authenticating using face id?</string>
+```
 to your Info.plist file. Failure to do so results in a dialog that tells the user your app has not been updated to use TouchID.
 
 Android Integration
 Update your project's AndroidManifest.xml file to include the USE_FINGERPRINT permissions:
-
+```
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.app">
   <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
 <manifest>
+```
 
 ```yaml
 dependencies:
