@@ -10,6 +10,7 @@ typedef Future<bool> PassCodeVerify(List<int> passcode);
 class LockScreen extends StatefulWidget {
   final VoidCallback onSuccess;
   final VoidCallback fingerFunction;
+  final bool fingerVerify;
   final String title;
   final int passLength;
   final bool showWrongPassDialog;
@@ -31,6 +32,7 @@ class LockScreen extends StatefulWidget {
     this.passLength,
     this.passCodeVerify,
     this.fingerFunction,
+    this.fingerVerify = false,
     this.showFingerPass = false,
     this.bgImage,
     this.fingerPrintImage,
@@ -114,6 +116,12 @@ class _LockScreenState extends State<LockScreen> {
     }
   }
 
+  _fingerPrint() {
+    if (widget.fingerVerify) {
+      widget.onSuccess();
+    }
+  }
+
   _deleteCode() {
     setState(() {
       if (_currentCodeLength > 0) {
@@ -126,6 +134,9 @@ class _LockScreenState extends State<LockScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(Duration(milliseconds: 200), () {
+      _fingerPrint();
+    });
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
@@ -182,6 +193,7 @@ class _LockScreenState extends State<LockScreen> {
                                   borderColor: widget.borderColor,
                                   foregroundColor: widget.foregroundColor,
                                   deleteCode: _deleteCode,
+                                  fingerVerify: widget.fingerVerify,
                                   status: _currentState,
                                 ),
                                 SizedBox(
@@ -206,74 +218,7 @@ class _LockScreenState extends State<LockScreen> {
                                 bottom: 10,
                                 child: GestureDetector(
                                   onTap: () {
-                                    showDialog(
-                                        context: context,
-                                        builder: (BuildContext context) {
-                                          return Center(
-                                            child: Dialog(
-                                              child: Container(
-                                                height: 400,
-                                                child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.center,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.start,
-                                                  children: <Widget>[
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                              top: 70.0),
-                                                      child: GestureDetector(
-                                                        onTap: widget
-                                                            .fingerFunction,
-                                                        child: Image.asset(
-                                                          "images/fingerprint.png",
-                                                          height: 100,
-                                                          width: 100,
-                                                          color: Colors.blue,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    SizedBox(
-                                                      height: 30,
-                                                    ),
-                                                    Text(
-                                                      "Use Touch Id",
-                                                      style: TextStyle(
-                                                          fontWeight:
-                                                              FontWeight.w400,
-                                                          fontSize: 20),
-                                                    ),
-                                                    SizedBox(
-                                                      height: 80,
-                                                    ),
-                                                    Divider(
-                                                      height: 1,
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.all(
-                                                              20.0),
-                                                      child: FlatButton(
-                                                        onPressed: () =>
-                                                            Navigator.pop(
-                                                                context),
-                                                        child: Text(
-                                                          "CANCEL",
-                                                          style: TextStyle(
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .normal,
-                                                              fontSize: 20),
-                                                        ),
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          );
-                                        });
+                                    widget.fingerFunction();
                                   },
                                   child: Image.asset(
                                     widget.fingerPrintImage,
@@ -404,6 +349,7 @@ class CodePanel extends StatelessWidget {
   final codeLength;
   final currentLength;
   final borderColor;
+  final bool fingerVerify;
   final foregroundColor;
   final H = 30.0;
   final W = 30.0;
@@ -415,6 +361,7 @@ class CodePanel extends StatelessWidget {
       this.borderColor,
       this.foregroundColor,
       this.deleteCode,
+      this.fingerVerify,
       this.status})
       : assert(codeLength > 0),
         assert(currentLength >= 0),
@@ -426,34 +373,55 @@ class CodePanel extends StatelessWidget {
   Widget build(BuildContext context) {
     var circles = <Widget>[];
     var color = borderColor;
-    if (status == 1) {
-      color = Colors.green.shade500;
-    }
-    if (status == 2) {
-      color = Colors.red.shade500;
-    }
-    for (int i = 1; i <= codeLength; i++) {
-      if (i > currentLength) {
-        circles.add(SizedBox(
-            width: W,
-            height: H,
-            child: Container(
-              decoration: new BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: new Border.all(color: color, width: 2.0),
-                  color: foregroundColor),
-            )));
-      } else {
-        circles.add(new SizedBox(
+    int circlePice = 1;
+
+    if (fingerVerify == true) {
+      do {
+        circles.add(
+          SizedBox(
             width: W,
             height: H,
             child: new Container(
               decoration: new BoxDecoration(
                 shape: BoxShape.circle,
                 border: new Border.all(color: color, width: 1.0),
-                color: color,
+                color: Colors.green.shade500,
               ),
-            )));
+            ),
+          ),
+        );
+        circlePice++;
+      } while (circlePice <= codeLength);
+    } else {
+      if (status == 1) {
+        color = Colors.green.shade500;
+      }
+      if (status == 2) {
+        color = Colors.red.shade500;
+      }
+      for (int i = 1; i <= codeLength; i++) {
+        if (i > currentLength) {
+          circles.add(SizedBox(
+              width: W,
+              height: H,
+              child: Container(
+                decoration: new BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: new Border.all(color: color, width: 2.0),
+                    color: foregroundColor),
+              )));
+        } else {
+          circles.add(new SizedBox(
+              width: W,
+              height: H,
+              child: new Container(
+                decoration: new BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: new Border.all(color: color, width: 1.0),
+                  color: color,
+                ),
+              )));
+        }
       }
     }
 
