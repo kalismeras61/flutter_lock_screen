@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:local_auth/local_auth.dart';
-import 'package:testapp/empty_page.dart';
 import 'package:flutter/services.dart';
 
 class PassCodeScreen extends StatefulWidget {
