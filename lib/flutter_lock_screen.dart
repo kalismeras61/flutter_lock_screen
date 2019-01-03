@@ -45,7 +45,6 @@ class LockScreen extends StatefulWidget {
   })  : assert(title != null),
         assert(passLength <= 8),
         assert(bgImage != null),
-        assert(fingerPrintImage != null),
         assert(borderColor != null),
         assert(foregroundColor != null),
         assert(passCodeVerify != null),
@@ -186,7 +185,7 @@ class _LockScreenState extends State<LockScreen> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 SizedBox(
-                                  height: Platform.isIOS ? 60 : 30,
+                                  height: Platform.isIOS ? 60 : 40,
                                 ),
                                 Text(
                                   widget.title,
@@ -214,8 +213,8 @@ class _LockScreenState extends State<LockScreen> {
                                 Text(
                                   "TYPE PASSCODE",
                                   style: TextStyle(
-                                      color: Colors.white70,
-                                      fontSize: 20,
+                                      color: Colors.white70.withOpacity(0.3),
+                                      fontSize: 18,
                                       fontFamily: "Open Sans"),
                                 ),
                               ],
@@ -234,8 +233,8 @@ class _LockScreenState extends State<LockScreen> {
                                   },
                                   child: Image.asset(
                                     widget.fingerPrintImage,
-                                    height: 50,
-                                    width: 50,
+                                    height: 40,
+                                    width: 40,
                                     color: Colors.white,
                                   ),
                                 ),
