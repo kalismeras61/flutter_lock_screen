@@ -10,7 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  local_auth: ^0.3.0  
 
 dev_dependencies:
   flutter_test:
