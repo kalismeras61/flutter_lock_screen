@@ -14,6 +14,7 @@ class _PassCodeScreenState extends State<PassCodeScreen> {
   bool isFingerprint;
 
   Future<Null> biometrics() async {
+    // be sure you install local_auth package as a dependency
     final LocalAuthentication auth = new LocalAuthentication();
     bool authenticated = false;
 
@@ -43,6 +44,7 @@ class _PassCodeScreenState extends State<PassCodeScreen> {
         fingerPrintImage: "images/fingerprint.png",
         showFingerPass: true,
         fingerFunction: biometrics,
+        numColor: Colors.blue,
         fingerVerify: isFingerprint,
         borderColor: Colors.white,
         showWrongPassDialog: true,

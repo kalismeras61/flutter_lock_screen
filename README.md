@@ -13,6 +13,9 @@ This package gives you beautiful pass code page for using both android and ios.
 <img src="http://www.yasinilhan.com/passcode/1.png" width="300" height="600" title="Screen Shoot">
 
 ## Finger Print Usage
+First, be sure you should ensure that you add the `local_auth` package as a dependency.
+https://pub.dartlang.org/packages/local_auth
+
 iOS Integration
 Note that this plugin works with both TouchID and FaceID. However, to use the latter, you need to also add:
 ```
@@ -36,7 +39,7 @@ You should ensure that you add the `flutter_lock_screen` as a dependency in your
 
 ```yaml
 dependencies:
-  flutter_lock_screen: '^1.0.4'
+  flutter_lock_screen: '^1.0.5'
 ```
 Than you can use it with below example.
 
