@@ -59,7 +59,7 @@ class PassCodeScreen extends StatefulWidget {
 }
 
 class _PassCodeScreenState extends State<PassCodeScreen> {
-  bool isFingerprint;
+  bool isFingerprint = false;
 
   Future<Null> biometrics() async {
     final LocalAuthentication auth = new LocalAuthentication();
