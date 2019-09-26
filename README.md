@@ -3,8 +3,8 @@
 This package gives you beautiful pass code page for using both android and ios.
 <br/><br/>
 
-[![flutter platform](https://img.shields.io/badge/Platform-Flutter-yellow.svg)](https://flutter.io) 
-[![pub package](https://img.shields.io/pub/v/flutter_lock_screen.svg)](https://pub.dartlang.org/packages/flutter_lock_screen) 
+[![flutter platform](https://img.shields.io/badge/Platform-Flutter-yellow.svg)](https://flutter.io)
+[![pub package](https://img.shields.io/pub/v/flutter_lock_screen.svg)](https://pub.dartlang.org/packages/flutter_lock_screen)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Demo
@@ -13,7 +13,7 @@ This package gives you beautiful pass code page for using both android and ios.
 <img src="http://www.yasinilhan.com/passcode/1.png" width="300" height="600" title="Screen Shoot">
 
 ## Finger Print Usage
-First, be sure you should ensure that you add the `local_auth` package as a dependency.
+First, be sure you should ensure that you add the `local_auth` package as a dependency. And Please read local_auth all integration details.
 https://pub.dartlang.org/packages/local_auth
 
 iOS Integration
@@ -25,6 +25,8 @@ Note that this plugin works with both TouchID and FaceID. However, to use the la
 to your Info.plist file. Failure to do so results in a dialog that tells the user your app has not been updated to use TouchID.
 
 Android Integration
+Note that local_auth plugin requires the use of a FragmentActivity as opposed to Activity. This can be easily done by switching to use FlutterFragmentActivity as opposed to FlutterActivity in your manifest (or your own Activity class if you are extending the base class).
+
 Update your project's AndroidManifest.xml file to include the USE_FINGERPRINT permissions:
 ```
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -39,11 +41,11 @@ You should ensure that you add the `flutter_lock_screen` as a dependency in your
 
 ```yaml
 dependencies:
-  flutter_lock_screen: '^1.0.5'
+  flutter_lock_screen: '^1.0.6'
 ```
 Than you can use it with below example.
 
-```dart 
+```dart
 import 'package:flutter/material.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:testapp/empty_page.dart';
@@ -123,6 +125,3 @@ class _PassCodeScreenState extends State<PassCodeScreen> {
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
-
-
-
