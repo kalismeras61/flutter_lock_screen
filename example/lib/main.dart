@@ -1,5 +1,18 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_lock_screen/flutter_lock_screen.dart';
+import 'package:flutter_passcode_example/empty.dart';
+import 'package:local_auth/local_auth.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: PassCodeScreen(
+      title: "Deneme",
+    ),
+  ));
+}
 
 class PassCodeScreen extends StatefulWidget {
   PassCodeScreen({Key key, this.title}) : super(key: key);
@@ -11,10 +24,9 @@ class PassCodeScreen extends StatefulWidget {
 }
 
 class _PassCodeScreenState extends State<PassCodeScreen> {
-  bool isFingerprint;
+  bool isFingerprint = false;
 
   Future<Null> biometrics() async {
-    // be sure you install local_auth package as a dependency
     final LocalAuthentication auth = new LocalAuthentication();
     bool authenticated = false;
 
@@ -40,7 +52,7 @@ class _PassCodeScreenState extends State<PassCodeScreen> {
     return LockScreen(
         title: "This is Screet ",
         passLength: myPass.length,
-        bgImage: "images/pass_code_bg.jpg",
+        bgImage: "images/bg.jpg",
         fingerPrintImage: "images/fingerprint.png",
         showFingerPass: true,
         fingerFunction: biometrics,

@@ -252,6 +252,7 @@ class _LockScreenState extends State<LockScreen> {
                         NotificationListener<OverscrollIndicatorNotification>(
                       onNotification: (overscroll) {
                         overscroll.disallowGlow();
+                        return null;
                       },
                       child: GridView.count(
                         crossAxisCount: 3,
