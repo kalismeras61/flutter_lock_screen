@@ -235,7 +235,6 @@ class _LockScreenState extends State<LockScreen> {
                                     widget.fingerPrintImage,
                                     height: 40,
                                     width: 40,
-                                    color: Colors.white,
                                   ),
                                 ),
                               )
