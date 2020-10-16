@@ -3,7 +3,12 @@
 //
 
 #import "GeneratedPluginRegistrant.h"
-#import <local_auth/LocalAuthPlugin.h>
+
+#if __has_include(<local_auth/FLTLocalAuthPlugin.h>)
+#import <local_auth/FLTLocalAuthPlugin.h>
+#else
+@import local_auth;
+#endif
 
 @implementation GeneratedPluginRegistrant
 
