@@ -9,8 +9,8 @@ This package gives you beautiful pass code page for using both android and ios.
 
 ## Demo
 
-<img src="http://www.yasinilhan.com/passcode/howtouse.gif" width="320" height="600" title="Screen Shoot">
-<img src="http://www.yasinilhan.com/passcode/1.png" width="300" height="600" title="Screen Shoot">
+<img src="https://www.yasinilhan.com/passcode/howtouse.gif" width="320" height="600" title="Screen Shoot">
+<img src="https://www.yasinilhan.com/passcode/1.png" width="300" height="600" title="Screen Shoot">
 
 ## Finger Print Usage
 First, be sure you should ensure that you add the `local_auth` package as a dependency. And Please read local_auth all integration details.
@@ -41,7 +41,7 @@ You should ensure that you add the `flutter_lock_screen` as a dependency in your
 
 ```yaml
 dependencies:
-  flutter_lock_screen: '^1.0.6'
+  flutter_lock_screen: '^1.0.8'
 ```
 Than you can use it with below example.
 
