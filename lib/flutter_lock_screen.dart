@@ -8,30 +8,62 @@ typedef void DeleteCode();
 typedef Future<bool> PassCodeVerify(List<int> passcode);
 
 class LockScreen extends StatefulWidget {
+  /// Password on success method
   final VoidCallback onSuccess;
-  final VoidCallback fingerFunction;
-  final bool fingerVerify;
+
+  /// Password finger function for auth
+  final VoidCallback? fingerFunction;
+
+  /// Password finger verify for auth
+  final bool? fingerVerify;
+
+  /// screen title
   final String title;
+
+  /// Pass length
   final int passLength;
-  final bool showWrongPassDialog;
-  final bool showFingerPass;
-  final String wrongPassTitle;
-  final String wrongPassContent;
-  final String wrongPassCancelButtonText;
-  final String bgImage;
-  final Color numColor;
-  final String fingerPrintImage;
-  final Color borderColor;
-  final Color foregroundColor;
+
+  /// Wrong password dialog
+  final bool? showWrongPassDialog;
+
+  /// Showing finger print area
+  final bool? showFingerPass;
+
+  /// Wrong password dialog title
+  final String? wrongPassTitle;
+
+  /// Wrong password dialog content
+  final String? wrongPassContent;
+
+  /// Wrong password dialog button text
+  final String? wrongPassCancelButtonText;
+
+  /// Background image
+  final String? bgImage;
+
+  /// Color for numbers
+  final Color? numColor;
+
+  /// Finger print image
+  final String? fingerPrintImage;
+
+  /// border color
+  final Color? borderColor;
+
+  /// foreground color
+  final Color? foregroundColor;
+
+  /// Password verify
   final PassCodeVerify passCodeVerify;
 
+  /// Lock Screen constructer
   LockScreen({
-    this.onSuccess,
-    this.title,
+    required this.onSuccess,
+    required this.title,
     this.borderColor,
     this.foregroundColor = Colors.transparent,
-    this.passLength,
-    this.passCodeVerify,
+    required this.passLength,
+    required this.passCodeVerify,
     this.fingerFunction,
     this.fingerVerify = false,
     this.showFingerPass = false,
@@ -42,13 +74,10 @@ class LockScreen extends StatefulWidget {
     this.wrongPassTitle,
     this.wrongPassContent,
     this.wrongPassCancelButtonText,
-  })  : assert(title != null),
-        assert(passLength <= 8),
+  })  : assert(passLength <= 8),
         assert(bgImage != null),
         assert(borderColor != null),
-        assert(foregroundColor != null),
-        assert(passCodeVerify != null),
-        assert(onSuccess != null);
+        assert(foregroundColor != null);
 
   @override
   _LockScreenState createState() => _LockScreenState();
@@ -83,7 +112,7 @@ class _LockScreenState extends State<LockScreen> {
                 _inputCodes.clear();
               });
             });
-            if (widget.showWrongPassDialog) {
+            if (widget.showWrongPassDialog!) {
               showDialog(
                   barrierDismissible: false,
                   context: context,
@@ -91,18 +120,18 @@ class _LockScreenState extends State<LockScreen> {
                     return Center(
                       child: AlertDialog(
                         title: Text(
-                          widget.wrongPassTitle,
+                          widget.wrongPassTitle!,
                           style: TextStyle(fontFamily: "Open Sans"),
                         ),
                         content: Text(
-                          widget.wrongPassContent,
+                          widget.wrongPassContent!,
                           style: TextStyle(fontFamily: "Open Sans"),
                         ),
                         actions: <Widget>[
-                          FlatButton(
+                          TextButton(
                             onPressed: () => Navigator.pop(context),
                             child: Text(
-                              widget.wrongPassCancelButtonText,
+                              widget.wrongPassCancelButtonText!,
                               style: TextStyle(color: Colors.blue),
                             ),
                           )
@@ -118,7 +147,7 @@ class _LockScreenState extends State<LockScreen> {
   }
 
   _fingerPrint() {
-    if (widget.fingerVerify) {
+    if (widget.fingerVerify!) {
       widget.onSuccess();
     }
   }
@@ -172,7 +201,7 @@ class _LockScreenState extends State<LockScreen> {
                             width: MediaQuery.of(context).size.width,
                             decoration: BoxDecoration(
                               image: DecorationImage(
-                                image: AssetImage(widget.bgImage),
+                                image: AssetImage(widget.bgImage!),
                                 fit: BoxFit.cover,
                                 colorFilter: ColorFilter.mode(
                                   Colors.grey.shade800,
@@ -204,7 +233,7 @@ class _LockScreenState extends State<LockScreen> {
                                   borderColor: widget.borderColor,
                                   foregroundColor: widget.foregroundColor,
                                   deleteCode: _deleteCode,
-                                  fingerVerify: widget.fingerVerify,
+                                  fingerVerify: widget.fingerVerify!,
                                   status: _currentState,
                                 ),
                                 SizedBox(
@@ -221,7 +250,7 @@ class _LockScreenState extends State<LockScreen> {
                             ),
                           ),
                         ),
-                        widget.showFingerPass
+                        widget.showFingerPass!
                             ? Positioned(
                                 top: MediaQuery.of(context).size.height /
                                     (Platform.isIOS ? 4 : 5),
@@ -229,10 +258,10 @@ class _LockScreenState extends State<LockScreen> {
                                 bottom: 10,
                                 child: GestureDetector(
                                   onTap: () {
-                                    widget.fingerFunction();
+                                    widget.fingerFunction!();
                                   },
                                   child: Image.asset(
-                                    widget.fingerPrintImage,
+                                    widget.fingerPrintImage!,
                                     height: 40,
                                     width: 40,
                                     color: Colors.white,
@@ -252,7 +281,7 @@ class _LockScreenState extends State<LockScreen> {
                         NotificationListener<OverscrollIndicatorNotification>(
                       onNotification: (overscroll) {
                         overscroll.disallowGlow();
-                        return null;
+                        return true;
                       },
                       child: GridView.count(
                         crossAxisCount: 3,
@@ -392,12 +421,12 @@ class CodePanel extends StatelessWidget {
   final codeLength;
   final currentLength;
   final borderColor;
-  final bool fingerVerify;
+  final bool? fingerVerify;
   final foregroundColor;
   final H = 30.0;
   final W = 30.0;
-  final DeleteCode deleteCode;
-  final int status;
+  final DeleteCode? deleteCode;
+  final int? status;
   CodePanel(
       {this.codeLength,
       this.currentLength,

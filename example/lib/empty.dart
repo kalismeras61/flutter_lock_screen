@@ -4,8 +4,11 @@ class EmptyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      appBar: AppBar(
+        title: Text('Secure Area'),
+      ),
       body: Center(
-        child: Text("Deneme"),
+        child: Text("Secure Screen"),
       ),
     );
   }
