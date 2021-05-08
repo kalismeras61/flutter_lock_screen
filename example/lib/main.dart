@@ -6,6 +6,8 @@ import 'package:flutter_lock_screen/flutter_lock_screen.dart';
 import 'package:flutter_passcode_example/empty.dart';
 import 'package:local_auth/local_auth.dart';
 
+import 'empty.dart';
+
 void main() {
   runApp(MaterialApp(
     home: PassCodeScreen(
@@ -15,9 +17,9 @@ void main() {
 }
 
 class PassCodeScreen extends StatefulWidget {
-  PassCodeScreen({Key key, this.title}) : super(key: key);
+  PassCodeScreen({Key? key, this.title}) : super(key: key);
 
-  final String title;
+  final String? title;
 
   @override
   _PassCodeScreenState createState() => new _PassCodeScreenState();
@@ -31,7 +33,7 @@ class _PassCodeScreenState extends State<PassCodeScreen> {
     bool authenticated = false;
 
     try {
-      authenticated = await auth.authenticateWithBiometrics(
+      authenticated = await auth.authenticate(
           localizedReason: 'Scan your fingerprint to authenticate',
           useErrorDialogs: true,
           stickyAuth: false);

@@ -41,7 +41,7 @@ You should ensure that you add the `flutter_lock_screen` as a dependency in your
 
 ```yaml
 dependencies:
-  flutter_lock_screen: '^2.0.0'
+  flutter_lock_screen: '^2.0.1'
 ```
 Than you can use it with below example.
 
