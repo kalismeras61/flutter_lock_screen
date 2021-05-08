@@ -19,11 +19,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0235C48C03BF7BC6FF8E9FFD1FB9E167 /* FLTLocalAuthPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = B677D4F1B0D40EDA2E4E637A0FBE6DA4 /* FLTLocalAuthPlugin.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0472ED0D53772DE79CC97C4F6E104F02 /* FLTLocalAuthPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2C9C83718E0A8684B463CF856C3AE /* FLTLocalAuthPlugin.m */; };
+		35765C272A91AB0965A93F66192EFB8A /* FLTLocalAuthPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD31277162B17213824B02D4BB638F /* FLTLocalAuthPlugin.m */; };
+		652144B020E7D06CE3C3AC837DF258BF /* FLTLocalAuthPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 45F85A300F82BFFAB7A8899763C4361D /* FLTLocalAuthPlugin.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		689200F065EF584FC1B8E7B656797180 /* Pods-Runner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 139605D53E86A88BEF73EE9ECD0B6E24 /* Pods-Runner-dummy.m */; };
-		76ED12A1A381326DF6A30CB715C73421 /* local_auth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F16DECB24B60AC72A0004EB01D04F3F9 /* local_auth-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E121358C9087457E2FFD972C9D1F32AB /* local_auth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 617709075663E69693CC5CB825E60D34 /* local_auth-dummy.m */; };
+		76ED12A1A381326DF6A30CB715C73421 /* local_auth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFB6939DD26CEB2D052EC9BAF15C1BC /* local_auth-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E121358C9087457E2FFD972C9D1F32AB /* local_auth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C28E9E4A1BF58DCDDB8D5B706D98A9 /* local_auth-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,28 +51,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0823C535E59F7FA4248C0BC9C1184337 /* local_auth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = local_auth.debug.xcconfig; sourceTree = "<group>"; };
 		0E9A35331108C97FEDA7CB25374D59ED /* Pods-Runner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Runner-acknowledgements.markdown"; sourceTree = "<group>"; };
 		139605D53E86A88BEF73EE9ECD0B6E24 /* Pods-Runner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Runner-dummy.m"; sourceTree = "<group>"; };
 		20A80C36589268662990FD581F0386AE /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 		3059509AC94D6ABFFC57C7F9248990AB /* Pods-Runner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Runner-acknowledgements.plist"; sourceTree = "<group>"; };
 		32183FD3A0D38CDA30DE76DAE52CF211 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
+		36F035E2524A4522AC90AE13446730CE /* local_auth.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = local_auth.podspec; path = "../../../../../../../../../../flutter/.pub-cache/hosted/pub.dartlang.org/local_auth-1.1.5/ios/local_auth.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		45F85A300F82BFFAB7A8899763C4361D /* FLTLocalAuthPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLTLocalAuthPlugin.h; path = "../../../../../../../../../../../flutter/.pub-cache/hosted/pub.dartlang.org/local_auth-1.1.5/ios/Classes/FLTLocalAuthPlugin.h"; sourceTree = "<group>"; };
 		4BE9B1533F3964622E91E716647C5835 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
-		617709075663E69693CC5CB825E60D34 /* local_auth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "local_auth-dummy.m"; sourceTree = "<group>"; };
 		669E8F25E1897672BDB80B7EB784DA24 /* libPods-Runner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Runner.a"; path = "libPods-Runner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B01BDB11373DA0D515DE5E19893DB7 /* Flutter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Flutter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		75F04D0A88CAB93A45DEC9978B33E28C /* liblocal_auth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = liblocal_auth.a; path = liblocal_auth.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		78766E73C608EF8C8673F3485F5DBBD3 /* local_auth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = local_auth.modulemap; sourceTree = "<group>"; };
-		87FC482928541B6307857832091A9EEF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = "../../../../../../../../../../flutter/.pub-cache/hosted/pub.dartlang.org/local_auth-0.6.3+3/LICENSE"; sourceTree = "<group>"; };
-		96A2C9C83718E0A8684B463CF856C3AE /* FLTLocalAuthPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLTLocalAuthPlugin.m; path = "../../../../../../../../../../../flutter/.pub-cache/hosted/pub.dartlang.org/local_auth-0.6.3+3/ios/Classes/FLTLocalAuthPlugin.m"; sourceTree = "<group>"; };
+		7CFC8209FD6F543559B971F6BDEDAB99 /* local_auth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = local_auth.modulemap; sourceTree = "<group>"; };
+		7FBD31277162B17213824B02D4BB638F /* FLTLocalAuthPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLTLocalAuthPlugin.m; path = "../../../../../../../../../../../flutter/.pub-cache/hosted/pub.dartlang.org/local_auth-1.1.5/ios/Classes/FLTLocalAuthPlugin.m"; sourceTree = "<group>"; };
+		90C28E9E4A1BF58DCDDB8D5B706D98A9 /* local_auth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "local_auth-dummy.m"; sourceTree = "<group>"; };
+		914D6B1C231780EA805087DF7642E625 /* local_auth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = local_auth.release.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A08A02D5128F3BF9B2B7A9F2DA6FA244 /* local_auth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "local_auth-prefix.pch"; sourceTree = "<group>"; };
-		B677D4F1B0D40EDA2E4E637A0FBE6DA4 /* FLTLocalAuthPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLTLocalAuthPlugin.h; path = "../../../../../../../../../../../flutter/.pub-cache/hosted/pub.dartlang.org/local_auth-0.6.3+3/ios/Classes/FLTLocalAuthPlugin.h"; sourceTree = "<group>"; };
+		A7191BF65488FB9A94B1391269301138 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = "../../../../../../../../../../flutter/.pub-cache/hosted/pub.dartlang.org/local_auth-1.1.5/LICENSE"; sourceTree = "<group>"; };
+		BAE7A76D186A54B8E4FEE95462F3E3DB /* local_auth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "local_auth-prefix.pch"; sourceTree = "<group>"; };
+		BDFB6939DD26CEB2D052EC9BAF15C1BC /* local_auth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "local_auth-umbrella.h"; sourceTree = "<group>"; };
 		C29C405536875303627A46ED48628458 /* Flutter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.release.xcconfig; sourceTree = "<group>"; };
 		DE4607BF46ECFC836C1DADF1E20F43C5 /* Flutter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.debug.xcconfig; sourceTree = "<group>"; };
-		E07BA587FE6B1A0CEB8A1775D35AB42E /* local_auth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = local_auth.release.xcconfig; sourceTree = "<group>"; };
-		F16DECB24B60AC72A0004EB01D04F3F9 /* local_auth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "local_auth-umbrella.h"; sourceTree = "<group>"; };
-		F6EE340F915C877301BA722B932EB8E0 /* local_auth.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = local_auth.podspec; path = "../../../../../../../../../../flutter/.pub-cache/hosted/pub.dartlang.org/local_auth-0.6.3+3/ios/local_auth.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E496E308E51135BC4E6B2A78EDD5B945 /* local_auth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = local_auth.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,40 +93,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0952E10D9555D6AA822305813141EC0D /* local_auth */ = {
+		0916B561DC82C94188232411726EC6E7 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				595CFB7F5E7E443718BCCD13931DC32D /* ios */,
+				CA43F4E9F3702DD74A881B0E22832ED0 /* Projects */,
 			);
-			name = local_auth;
-			path = local_auth;
+			name = data;
+			path = data;
 			sourceTree = "<group>";
 		};
-		0EB2BC249A3F438AE3FF5F4A28C50C78 /* .. */ = {
+		0F1F685D5A00D72C0A8417277174DABB /* myplugins */ = {
 			isa = PBXGroup;
 			children = (
-				573732EB93E45EE210F6E82DE5198186 /* data */,
-			);
-			name = ..;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		20D4F7CF080070DA197661CBC028A68E /* myplugins */ = {
-			isa = PBXGroup;
-			children = (
-				AF7B38571217C6BDC9B50BE966E8605D /* flutter_lock_screen */,
+				23D75C61834D984D8DCC614A7519EB32 /* flutter_lock_screen */,
 			);
 			name = myplugins;
 			path = myplugins;
 			sourceTree = "<group>";
 		};
-		2542D5A221C20C556FCD7A770457DFE6 /* .. */ = {
+		199335E4D2DA047FC65A060775EA629E /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				0EB2BC249A3F438AE3FF5F4A28C50C78 /* .. */,
+				64E503C93A705D577E31E6A1D4177AE7 /* Classes */,
 			);
-			name = ..;
-			path = ..;
+			name = ios;
+			path = ios;
+			sourceTree = "<group>";
+		};
+		23D75C61834D984D8DCC614A7519EB32 /* flutter_lock_screen */ = {
+			isa = PBXGroup;
+			children = (
+				9B0EFD5A3CF29B125167B837A1221CD2 /* example */,
+			);
+			name = flutter_lock_screen;
+			path = flutter_lock_screen;
 			sourceTree = "<group>";
 		};
 		2CDED2906AFC4B9E79F3BEEF8043531E /* Pods-Runner */ = {
@@ -143,13 +143,27 @@
 			path = "Target Support Files/Pods-Runner";
 			sourceTree = "<group>";
 		};
-		366F18DC24319F211E4B878C54A547CB /* .. */ = {
+		2F8C69D7347D5AE7CD50C2BD5A98F2FA /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C80F798787FB45C95A37E52016D64771 /* .. */,
+				7CFC8209FD6F543559B971F6BDEDAB99 /* local_auth.modulemap */,
+				90C28E9E4A1BF58DCDDB8D5B706D98A9 /* local_auth-dummy.m */,
+				BAE7A76D186A54B8E4FEE95462F3E3DB /* local_auth-prefix.pch */,
+				BDFB6939DD26CEB2D052EC9BAF15C1BC /* local_auth-umbrella.h */,
+				E496E308E51135BC4E6B2A78EDD5B945 /* local_auth.debug.xcconfig */,
+				914D6B1C231780EA805087DF7642E625 /* local_auth.release.xcconfig */,
 			);
-			name = ..;
-			path = "../../../../../../../../../../flutter/.pub-cache/hosted/pub.dartlang.org/local_auth-0.6.3+3/ios";
+			name = "Support Files";
+			path = "../../../../Pods/Target Support Files/local_auth";
+			sourceTree = "<group>";
+		};
+		35F8B692C4DF1E12A270AFD9B34FB28D /* local_auth */ = {
+			isa = PBXGroup;
+			children = (
+				199335E4D2DA047FC65A060775EA629E /* ios */,
+			);
+			name = local_auth;
+			path = local_auth;
 			sourceTree = "<group>";
 		};
 		388A2C86FF755910F9EA6E190E67524D /* Targets Support Files */ = {
@@ -169,51 +183,88 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		573732EB93E45EE210F6E82DE5198186 /* data */ = {
+		3B2E8EF9486D1D9E85B9C9FF6DF331D2 /* .. */ = {
 			isa = PBXGroup;
 			children = (
-				8DD3216EBFE5381DF4D7EBAAB7A1891B /* Projects */,
+				D25D93D786FFC6B8D3F88BA2FCD894B1 /* .. */,
 			);
-			name = data;
-			path = data;
+			name = ..;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		595CFB7F5E7E443718BCCD13931DC32D /* ios */ = {
+		46CD6919147A1417D7DA6E6D82044AA9 /* .. */ = {
 			isa = PBXGroup;
 			children = (
-				E7529188562E0ECB51027EBBA638EE85 /* Classes */,
+				0916B561DC82C94188232411726EC6E7 /* data */,
 			);
-			name = ios;
-			path = ios;
+			name = ..;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		5DC4E12F44F0D4D1127CD5AC99120EE8 /* local_auth */ = {
+		64E503C93A705D577E31E6A1D4177AE7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				366F18DC24319F211E4B878C54A547CB /* .. */,
-				C2BE8BBD7DE8F54B648E97B837301309 /* Pod */,
-				A8FFD05EE64C38511FA763B5F3CD9BB5 /* Support Files */,
+				45F85A300F82BFFAB7A8899763C4361D /* FLTLocalAuthPlugin.h */,
+				7FBD31277162B17213824B02D4BB638F /* FLTLocalAuthPlugin.m */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		659352584675D5A9CFDA1DA5F9381703 /* local_auth */ = {
+			isa = PBXGroup;
+			children = (
+				A8B6F204CB1C381FEE978EFCA28065CF /* .. */,
+				66C9819685537D1FD5843FE1F0899AE8 /* Pod */,
+				2F8C69D7347D5AE7CD50C2BD5A98F2FA /* Support Files */,
 			);
 			name = local_auth;
 			path = ../.symlinks/plugins/local_auth/ios;
 			sourceTree = "<group>";
 		};
-		6CDE28CD09E868937B0FA6E00089105F /* .. */ = {
+		65D501A86F6D48F6AAEEA61C3ED188F1 /* .. */ = {
 			isa = PBXGroup;
 			children = (
-				A9F9AF21705BFB35EA7E666509023138 /* .. */,
+				3B2E8EF9486D1D9E85B9C9FF6DF331D2 /* .. */,
 			);
 			name = ..;
 			path = ..;
 			sourceTree = "<group>";
 		};
-		7E71EB10FD10E52555EA1FA5D3118391 /* .. */ = {
+		6625DBF4DBF1D149930ED2B36C216208 /* .. */ = {
 			isa = PBXGroup;
 			children = (
-				2542D5A221C20C556FCD7A770457DFE6 /* .. */,
+				46CD6919147A1417D7DA6E6D82044AA9 /* .. */,
 			);
 			name = ..;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		66C9819685537D1FD5843FE1F0899AE8 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				A7191BF65488FB9A94B1391269301138 /* LICENSE */,
+				36F035E2524A4522AC90AE13446730CE /* local_auth.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		6F486C95422ED3CD143C81B2CFCC9DC2 /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				35F8B692C4DF1E12A270AFD9B34FB28D /* local_auth */,
+			);
+			name = plugins;
+			path = plugins;
+			sourceTree = "<group>";
+		};
+		77598A42EC178876F85D7B9665B15893 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				FC6C0BB0F13D7C2BF96999A94AEA522D /* .symlinks */,
+			);
+			name = ios;
+			path = ios;
 			sourceTree = "<group>";
 		};
 		7F0A9B35CCBB903C3AB8D9AD8DC51C54 /* Support Files */ = {
@@ -224,15 +275,6 @@
 			);
 			name = "Support Files";
 			path = "../Pods/Target Support Files/Flutter";
-			sourceTree = "<group>";
-		};
-		8DD3216EBFE5381DF4D7EBAAB7A1891B /* Projects */ = {
-			isa = PBXGroup;
-			children = (
-				20D4F7CF080070DA197661CBC028A68E /* myplugins */,
-			);
-			name = Projects;
-			path = Projects;
 			sourceTree = "<group>";
 		};
 		92F5DA3C01C52B6ABAA786818BE0ACF2 /* Pod */ = {
@@ -247,86 +289,36 @@
 			isa = PBXGroup;
 			children = (
 				E52B1CA1271A85DAD5B09AE17EF2D71B /* Flutter */,
-				5DC4E12F44F0D4D1127CD5AC99120EE8 /* local_auth */,
+				659352584675D5A9CFDA1DA5F9381703 /* local_auth */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		A8FFD05EE64C38511FA763B5F3CD9BB5 /* Support Files */ = {
+		9B0EFD5A3CF29B125167B837A1221CD2 /* example */ = {
 			isa = PBXGroup;
 			children = (
-				78766E73C608EF8C8673F3485F5DBBD3 /* local_auth.modulemap */,
-				617709075663E69693CC5CB825E60D34 /* local_auth-dummy.m */,
-				A08A02D5128F3BF9B2B7A9F2DA6FA244 /* local_auth-prefix.pch */,
-				F16DECB24B60AC72A0004EB01D04F3F9 /* local_auth-umbrella.h */,
-				0823C535E59F7FA4248C0BC9C1184337 /* local_auth.debug.xcconfig */,
-				E07BA587FE6B1A0CEB8A1775D35AB42E /* local_auth.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../../../../Pods/Target Support Files/local_auth";
-			sourceTree = "<group>";
-		};
-		A9F9AF21705BFB35EA7E666509023138 /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				7E71EB10FD10E52555EA1FA5D3118391 /* .. */,
-			);
-			name = ..;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		AEDC12273850B290FF08ED353A0A10E3 /* example */ = {
-			isa = PBXGroup;
-			children = (
-				BE09511E13829CD5030F8193BE287A59 /* ios */,
+				77598A42EC178876F85D7B9665B15893 /* ios */,
 			);
 			name = example;
 			path = example;
 			sourceTree = "<group>";
 		};
-		AF7B38571217C6BDC9B50BE966E8605D /* flutter_lock_screen */ = {
+		A8B6F204CB1C381FEE978EFCA28065CF /* .. */ = {
 			isa = PBXGroup;
 			children = (
-				AEDC12273850B290FF08ED353A0A10E3 /* example */,
-			);
-			name = flutter_lock_screen;
-			path = flutter_lock_screen;
-			sourceTree = "<group>";
-		};
-		B2DAD1DCFD74AA2D56E1BDA9AAB9483F /* plugins */ = {
-			isa = PBXGroup;
-			children = (
-				0952E10D9555D6AA822305813141EC0D /* local_auth */,
-			);
-			name = plugins;
-			path = plugins;
-			sourceTree = "<group>";
-		};
-		BE09511E13829CD5030F8193BE287A59 /* ios */ = {
-			isa = PBXGroup;
-			children = (
-				E4F10FCA0244F991066E2DF3F87B23B3 /* .symlinks */,
-			);
-			name = ios;
-			path = ios;
-			sourceTree = "<group>";
-		};
-		C2BE8BBD7DE8F54B648E97B837301309 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				87FC482928541B6307857832091A9EEF /* LICENSE */,
-				F6EE340F915C877301BA722B932EB8E0 /* local_auth.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		C80F798787FB45C95A37E52016D64771 /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				6CDE28CD09E868937B0FA6E00089105F /* .. */,
+				E343A543DF5166F85118DD559E20BA02 /* .. */,
 			);
 			name = ..;
-			path = ..;
+			path = "../../../../../../../../../../flutter/.pub-cache/hosted/pub.dartlang.org/local_auth-1.1.5/ios";
+			sourceTree = "<group>";
+		};
+		CA43F4E9F3702DD74A881B0E22832ED0 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				0F1F685D5A00D72C0A8417277174DABB /* myplugins */,
+			);
+			name = Projects;
+			path = Projects;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -340,6 +332,15 @@
 			);
 			sourceTree = "<group>";
 		};
+		D25D93D786FFC6B8D3F88BA2FCD894B1 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				6625DBF4DBF1D149930ED2B36C216208 /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,13 +348,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E4F10FCA0244F991066E2DF3F87B23B3 /* .symlinks */ = {
+		E343A543DF5166F85118DD559E20BA02 /* .. */ = {
 			isa = PBXGroup;
 			children = (
-				B2DAD1DCFD74AA2D56E1BDA9AAB9483F /* plugins */,
+				65D501A86F6D48F6AAEEA61C3ED188F1 /* .. */,
 			);
-			name = .symlinks;
-			path = .symlinks;
+			name = ..;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		E52B1CA1271A85DAD5B09AE17EF2D71B /* Flutter */ = {
@@ -366,14 +367,13 @@
 			path = ../Flutter;
 			sourceTree = "<group>";
 		};
-		E7529188562E0ECB51027EBBA638EE85 /* Classes */ = {
+		FC6C0BB0F13D7C2BF96999A94AEA522D /* .symlinks */ = {
 			isa = PBXGroup;
 			children = (
-				B677D4F1B0D40EDA2E4E637A0FBE6DA4 /* FLTLocalAuthPlugin.h */,
-				96A2C9C83718E0A8684B463CF856C3AE /* FLTLocalAuthPlugin.m */,
+				6F486C95422ED3CD143C81B2CFCC9DC2 /* plugins */,
 			);
-			name = Classes;
-			path = Classes;
+			name = .symlinks;
+			path = .symlinks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,7 +390,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0235C48C03BF7BC6FF8E9FFD1FB9E167 /* FLTLocalAuthPlugin.h in Headers */,
+				652144B020E7D06CE3C3AC837DF258BF /* FLTLocalAuthPlugin.h in Headers */,
 				76ED12A1A381326DF6A30CB715C73421 /* local_auth-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,7 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0472ED0D53772DE79CC97C4F6E104F02 /* FLTLocalAuthPlugin.m in Sources */,
+				35765C272A91AB0965A93F66192EFB8A /* FLTLocalAuthPlugin.m in Sources */,
 				E121358C9087457E2FFD972C9D1F32AB /* local_auth-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,7 +614,7 @@
 		};
 		315520302DB180F997BB48BBB23F6A3A /* Profile */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E07BA587FE6B1A0CEB8A1775D35AB42E /* local_auth.release.xcconfig */;
+			baseConfigurationReference = 914D6B1C231780EA805087DF7642E625 /* local_auth.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -745,7 +745,7 @@
 		};
 		A54AA3E3F021381FDE1E82C46685852B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E07BA587FE6B1A0CEB8A1775D35AB42E /* local_auth.release.xcconfig */;
+			baseConfigurationReference = 914D6B1C231780EA805087DF7642E625 /* local_auth.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -909,7 +909,7 @@
 		};
 		E957BFCB370EC73C36F634B0D3617BEA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0823C535E59F7FA4248C0BC9C1184337 /* local_auth.debug.xcconfig */;
+			baseConfigurationReference = E496E308E51135BC4E6B2A78EDD5B945 /* local_auth.debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

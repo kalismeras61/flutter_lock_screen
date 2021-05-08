@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## local_auth
 
-Copyright 2017 The Chromium Authors. All rights reserved.
+Copyright 2013 The Flutter Authors. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:

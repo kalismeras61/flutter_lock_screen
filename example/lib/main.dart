@@ -59,6 +59,7 @@ class _PassCodeScreenState extends State<PassCodeScreen> {
           "images/fingerprint.png",
           height: 40,
           width: 40,
+          color: Colors.white,
         ),
         showFingerPass: true,
         fingerFunction: biometrics,
