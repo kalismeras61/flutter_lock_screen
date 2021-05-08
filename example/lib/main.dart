@@ -53,7 +53,11 @@ class _PassCodeScreenState extends State<PassCodeScreen> {
         title: "This is Screet ",
         passLength: myPass.length,
         bgImage: "images/bg.jpg",
-        fingerPrintImage: "images/fingerprint.png",
+        fingerPrintImage: Image.asset(
+          "images/fingerprint.png",
+          height: 40,
+          width: 40,
+        ),
         showFingerPass: true,
         fingerFunction: biometrics,
         numColor: Colors.blue,

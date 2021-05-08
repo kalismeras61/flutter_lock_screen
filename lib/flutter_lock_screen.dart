@@ -45,7 +45,7 @@ class LockScreen extends StatefulWidget {
   final Color? numColor;
 
   /// Finger print image
-  final String? fingerPrintImage;
+  final Widget? fingerPrintImage;
 
   /// border color
   final Color? borderColor;
@@ -260,11 +260,7 @@ class _LockScreenState extends State<LockScreen> {
                                   onTap: () {
                                     widget.fingerFunction!();
                                   },
-                                  child: Image.asset(
-                                    widget.fingerPrintImage!,
-                                    height: 40,
-                                    width: 40,
-                                  ),
+                                  child: widget.fingerPrintImage!,
                                 ),
                               )
                             : Container(),
